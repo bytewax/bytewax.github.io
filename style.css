@@ -53,7 +53,7 @@ body{
 }
 .content{
     text-align:center;
-    max-width:1024px;
+    max-width:768px;
     margin:0 auto;
 }
 .logo{
@@ -120,12 +120,85 @@ body{
     margin-top:.25em;
     color:#888;
 }
+
+/** Mailchimp signup **/
+.newsletter{
+    margin:56px auto 0 auto;
+}
+.newsletter__title{
+    font-size:18px;
+    margin:0 0 27px 0;
+    text-align:center;
+}
+#mc_embed_signup form{
+    padding:0;
+}
+.newsletter__form{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:row;
+            flex-direction:row;
+    -ms-flex-wrap:nowrap;
+        flex-wrap:nowrap;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+}
+#mc_embed_signup input.email{
+    height:54px;
+    border-radius:0;
+    background:transparent;
+    border:1px solid #333;
+    outline:none;
+    font-family: 'Open Sans', sans-serif;
+    font-size:16px;
+    line-height:28px;
+    padding:0 18px;
+    color:#fff;
+}
+#mc_embed_signup input.email::-webkit-input-placeholder{
+    color: #888;
+}
+#mc_embed_signup input.email::-moz-placeholder { /* Firefox 19+ */
+    color: #888;
+}
+#mc_embed_signup input.email:-ms-input-placeholder { /* IE 10+ */
+    color: #888;
+}
+#mc_embed_signup input.email:-moz-placeholder { /* Firefox 18- */
+    color: #888;
+}
+#mc_embed_signup .clear{
+    margin-left:12px;
+}
+#mc_embed_signup .button{
+    font-size:16px;
+    font-weight:600;
+    height:54px;
+    padding:0 27px;
+    border-radius:0;
+    font-family: 'Open Sans', sans-serif;
+    background-color:#fab90f;
+    color:#000;
+    letter-spacing:0;
+    outline:none;
+}
+#mc_embed_signup .button:hover,
+#mc_embed_signup .button:focus{
+    background:#fff;
+}
 @media screen and (max-width:768px){
     .logo{
         height:72px;
     }
     .contact{
         margin-top:72px;
+    }
+    #mc_embed_signup .clear{
+        width:auto;
     }
 }
 @media screen and (max-width:552px){
@@ -155,5 +228,23 @@ body{
         display:block;
         margin:12px 36px;
         width:auto;
+    }
+    .newsletter{
+        margin-top:36px;
+    }
+    .newsletter__title{
+        margin-bottom:21px;
+        padding:0 24px;
+    }
+    .newsletter__form{
+        -ms-flex-wrap:wrap;
+            flex-wrap:wrap;
+        padding:0 24px;
+    }
+    #mc_embed_signup input.email{
+        margin-bottom:12px;
+    }
+    #mc_embed_signup .clear{
+        margin-left:0;
     }
 }
