@@ -1,3 +1,4 @@
+
 body{
     background:#000;
     color:#fff;
@@ -6,6 +7,10 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-size:16px;
     line-height:28px;
+}
+body, *{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 .container{
     position:relative;
@@ -126,8 +131,8 @@ body{
     margin:56px auto 0 auto;
 }
 .newsletter__title{
-    font-size:18px;
-    margin:0 0 27px 0;
+    font-size:21px;
+    margin:0 0 32px 0;
     text-align:center;
 }
 #mc_embed_signup form{
@@ -147,44 +152,47 @@ body{
         -ms-flex-pack:center;
             justify-content:center;
 }
-#mc_embed_signup input.email{
+.newsletter__form-group{
+    min-width:270px;
+    margin-right:20px;
+}
+#mc_embed_signup input{
     height:54px;
     border-radius:0;
     background:transparent;
-    border:1px solid #333;
+    border:1px solid #444;
     outline:none;
     font-family: 'Open Sans', sans-serif;
     font-size:16px;
     line-height:28px;
     padding:0 18px;
     color:#fff;
+    width:100%;
 }
-#mc_embed_signup input.email::-webkit-input-placeholder{
-    color: #888;
+#mc_embed_signup input::-webkit-input-placeholder{
+    color: #aaa;
 }
-#mc_embed_signup input.email::-moz-placeholder { /* Firefox 19+ */
-    color: #888;
+#mc_embed_signup input::-moz-placeholder { /* Firefox 19+ */
+    color: #aaa;
 }
-#mc_embed_signup input.email:-ms-input-placeholder { /* IE 10+ */
-    color: #888;
+#mc_embed_signup input:-ms-input-placeholder { /* IE 10+ */
+    color: #aaa;
 }
-#mc_embed_signup input.email:-moz-placeholder { /* Firefox 18- */
-    color: #888;
-}
-#mc_embed_signup .clear{
-    margin-left:12px;
+#mc_embed_signup input:-moz-placeholder { /* Firefox 18- */
+    color: #aaa;
 }
 #mc_embed_signup .button{
     font-size:16px;
     font-weight:600;
     height:54px;
-    padding:0 27px;
+    padding:0 36px;
     border-radius:0;
     font-family: 'Open Sans', sans-serif;
     background-color:#fab90f;
     color:#000;
     letter-spacing:0;
     outline:none;
+    cursor:pointer;
 }
 #mc_embed_signup .button:hover,
 #mc_embed_signup .button:focus{
@@ -197,7 +205,7 @@ body{
     .contact{
         margin-top:72px;
     }
-    #mc_embed_signup .clear{
+    #mc_embed_signup .newsletter__form-submit{
         width:auto;
     }
 }
@@ -233,18 +241,21 @@ body{
         margin-top:36px;
     }
     .newsletter__title{
-        margin-bottom:21px;
+        margin-bottom:24px;
         padding:0 24px;
+        font-size:18px;
     }
     .newsletter__form{
         -ms-flex-wrap:wrap;
             flex-wrap:wrap;
         padding:0 24px;
     }
-    #mc_embed_signup input.email{
+    .newsletter__form-group{
+        width:100%;
         margin-bottom:12px;
+        margin-right:0;
     }
-    #mc_embed_signup .clear{
-        margin-left:0;
+    .newsletter__form-submit{
+        margin-top:18px;
     }
 }
